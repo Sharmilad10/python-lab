@@ -1,11 +1,10 @@
-import sys
-str=raw_input("Enter String")
-char=0
-word=1
-for i in  str:
-    char=char+1
-    if(i==''):
-        word=word+1
-        print("number of words in the given string",word)
-        print("number of characters in the given string",char)
-        print("number of space in the given string",(word-1))
+wordCount=0
+charCount=0
+str=input("Enter the string\n")
+split_str=str.split()
+wordCount=len(split_str)
+for word in split_str:
+    charCount+=len(word)
+print("Total words in the given string ",wordCount)
+print("Total characters in the given string ",charCount)
+print("Number of space in the given string ",(wordCount-1))
